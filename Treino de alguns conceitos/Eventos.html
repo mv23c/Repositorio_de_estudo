@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        #botao {
+           background-color: #9f4646; 
+           border-radius: 10px;
+           font-weight: 700;
+           font-size: 18px;
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+           padding: 32px;
+           border: none;
+           cursor: pointer;
+           color: #FFF;
+           display: block;
+           margin: 64px 0;
+           margin-left: auto;
+           margin-right: auto;
+           
+        }
+
+        #botao:hover {
+            color: rgb(234, 231, 227);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <button id="botao" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interaja...</button>
+    </div>
+
+    <script>
+        function clicar() {
+            let clickBotao = window.document.getElementById('botao');
+            clickBotao.innerText = 'Clicou!';
+            clickBotao.style.background = 'blue';
+        }
+
+        function entrar() {
+            let entrarBotao = window.document.getElementById('botao');
+            entrarBotao.innerText = 'Entrou!'
+            entrarBotao.style.background = 'green';
+        }
+
+        function sair() {
+            let sairBotao = window.document.getElementById('botao');
+            sairBotao.innerText = 'Saiu!'
+            sairBotao.style.background = '#9f4646';
+        }
+    </script>
+</body>
+</html>
